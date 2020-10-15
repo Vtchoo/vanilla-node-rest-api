@@ -1,0 +1,17 @@
+[
+    {
+        "ID": 1,
+        "name": "Mouse C3Tech Gamer",
+        "price": 70.00
+    },
+    {
+        "ID": 2,
+        "name": "Mouse Logitech Basic",
+        "price": 50.00
+    },
+    {
+        "ID": 3,
+        "name": "Headset Multilaser",
+        "price": 80.00
+    }
+]
