@@ -1,17 +1,32 @@
 [
-    {
-        "ID": 1,
-        "name": "Mouse C3Tech Gamer",
-        "price": 70.00
-    },
-    {
-        "ID": 2,
-        "name": "Mouse Logitech Basic",
-        "price": 50.00
-    },
-    {
-        "ID": 3,
-        "name": "Headset Multilaser",
-        "price": 80.00
-    }
+	{
+		"ID": 1,
+		"name": "Mouse C3Tech Gamer",
+		"price": 70
+	},
+	{
+		"ID": 2,
+		"name": "Mouse Logitech Basic",
+		"price": 50
+	},
+	{
+		"ID": 3,
+		"name": "Headset Multilaser",
+		"price": 80
+	},
+	{
+		"name": "Motorola Moto G2",
+		"price": 1600,
+		"ID": "cff068fc-bf3b-4f0a-8c43-6f1d83925d24"
+	},
+	{
+		"name": "Motorola Moto G2 Play",
+		"price": 1900,
+		"ID": "9e915ad2-5032-435d-9b01-8ab94300e381"
+	},
+	{
+		"name": "Samsung S4 Mini",
+		"price": 900,
+		"ID": "ec6c793b-d0a1-4c20-8600-944a1ef4e73f"
+	}
 ]

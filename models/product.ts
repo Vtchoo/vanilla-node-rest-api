@@ -1,4 +1,5 @@
 import products from '../database/products.json'
+import { FileSystem } from '../utils'
 
 class Product {
 
@@ -25,6 +26,7 @@ class Product {
     static Create(product) {
         return new Promise((resolve, reject) => {
             products.push(product)
+            FileSystem.WriteDataToFile('./database/products.json', products)
             resolve(product)
         })
     }
