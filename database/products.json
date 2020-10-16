@@ -28,5 +28,10 @@
 		"name": "Samsung S4 Mini",
 		"price": 900,
 		"ID": "ec6c793b-d0a1-4c20-8600-944a1ef4e73f"
+	},
+	{
+		"name": "Samsung S4 Mini",
+		"price": 1900,
+		"ID": "f4b06ab6-bfb1-4f7d-8488-e1530647b8bc"
 	}
 ]

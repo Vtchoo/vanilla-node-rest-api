@@ -1,6 +1,7 @@
 import { IncomingMessage, ServerResponse } from 'http'
 import Product from '../models/product'
 import { v4 as uuid } from 'uuid'
+import HttpParser from '../utils/httpparser'
 
 const ProductsController = {
 
@@ -51,27 +52,43 @@ const ProductsController = {
 
         try {
 
-            let body
-            let data = []
-            req.on('data', chunk => {
-                data.push(chunk)
-            })
-            req.on('end', async () => {
-                console.log(data.toString())
-                body = JSON.parse(data.toString())
+            // let body
+            // let data = ''
+            // req.on('data', chunk => {
+            //     data += chunk.toString()
+            // })
+            // req.on('end', async () => {
+            //     console.log(data)
+            //     body = JSON.parse(data)
                 
-                const product = {
-                    ...body,
-                    ID: uuid()
-                }
+            //     const product = {
+            //         ...body,
+            //         ID: uuid()
+            //     }
     
+            //     const newProduct = await Product.Create(product)
+    
+            //     console.log('new product created')
+    
+            //     res.writeHead(201, { 'Content-Type': 'application/json' })
+            //     res.end(JSON.stringify(newProduct))
+            // })
+
+            try {
+                const body = await HttpParser.GetRequestData(req)
+
+                const product = { ...body, ID: uuid() }
+
                 const newProduct = await Product.Create(product)
-    
-                console.log('new product created')
-    
-                res.writeHead(200, { 'Content-Type': 'application/json' })
+
+                res.writeHead(201, { 'Content-Type': 'application/json' })
                 res.end(JSON.stringify(newProduct))
-            })
+            } catch (error) {
+                res.writeHead(500)
+                res.end(error)
+            }
+
+            
 
             // const product = {
             //     ID: uuid(),
